@@ -359,6 +359,136 @@ const htmlQuestions = [
 		difficulty: 'hard',
 		category: 'html',
 		topic: 'accessibility'
+	},
+	{
+		id: 'html-034',
+		text: 'What is the difference between "aria-hidden=true" and the HTML "hidden" attribute?',
+		answers: [
+			'aria-hidden removes the element only from the accessibility tree while keeping it visually rendered; hidden hides it visually and from the accessibility tree.',
+			'They are identical in effect.',
+			'hidden removes only from the accessibility tree; aria-hidden hides visually.',
+			'aria-hidden also removes the element from the layout flow.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'accessibility'
+	},
+	{
+		id: 'html-035',
+		text: 'What is the purpose of the "role" attribute in ARIA?',
+		answers: [
+			'To explicitly declare the semantic role of an element to assistive technologies when the native element is insufficient.',
+			'To apply CSS roles to elements.',
+			'To define the rendering order of elements.',
+			'To assign JavaScript event handlers to elements.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'accessibility'
+	},
+	{
+		id: 'html-036',
+		text: 'What does the "enctype" attribute on a form control?',
+		answers: [
+			'The MIME type used to encode the form data when submitting — required to be "multipart/form-data" for file uploads.',
+			'The character encoding of the page.',
+			'Whether the form uses GET or POST.',
+			'The encryption algorithm for form data in transit.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'forms'
+	},
+	{
+		id: 'html-037',
+		text: 'What is the difference between GET and POST as form method values?',
+		answers: [
+			'GET appends data to the URL query string (visible, limited size); POST sends data in the request body (hidden, no size limit).',
+			'POST appends data to the URL; GET sends it in the body.',
+			'They are functionally identical for forms.',
+			'GET is only for read operations; POST always writes to a database.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'forms'
+	},
+	{
+		id: 'html-038',
+		text: 'What does the "loading=lazy" attribute on an <img> do?',
+		answers: [
+			'Defers loading the image until it is near the viewport, reducing initial page load.',
+			'Loads the image at low resolution first, then full resolution.',
+			'Prevents the image from loading on slow connections.',
+			'Caches the image indefinitely in the browser.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'media'
+	},
+	{
+		id: 'html-039',
+		text: 'What does the "crossorigin" attribute on <img> or <script> enable?',
+		answers: [
+			'CORS requests so the resource can be accessed with credentials or used in a canvas without tainting it.',
+			'Loading resources from any domain without restriction.',
+			'Encrypting the request to the resource.',
+			'Caching the resource across origins.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'media'
+	},
+	{
+		id: 'html-040',
+		text: 'What is the "Content Security Policy" meta tag used for?',
+		answers: [
+			'To restrict which sources browsers may load scripts, styles, and other resources from, mitigating XSS attacks.',
+			'To set the character encoding of the page.',
+			'To prevent search engines from indexing the page.',
+			'To define the viewport size for mobile devices.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'semantics'
+	},
+	{
+		id: 'html-041',
+		text: 'What is the difference between <section> and <article>?',
+		answers: [
+			'<article> is self-contained content that makes sense independently; <section> groups thematically related content that is part of a larger whole.',
+			'<section> is for standalone content; <article> is for grouped content.',
+			'They are interchangeable.',
+			'<article> can only contain text; <section> can contain any elements.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'semantics'
+	},
+	{
+		id: 'html-042',
+		text: 'What does the "pattern" attribute on an input do?',
+		answers: [
+			'Validates the input value against a regular expression before form submission.',
+			'Applies a visual pattern to the input field.',
+			'Masks the input value like a password field.',
+			'Sets a placeholder pattern text inside the input.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'forms'
+	},
+	{
+		id: 'html-043',
+		text: 'What is "focus management" and why does it matter in accessible SPAs?',
+		answers: [
+			'Programmatically moving keyboard focus to the right element after route changes or modal opens, so screen reader users know where they are.',
+			'Applying CSS focus styles to all interactive elements.',
+			'Preventing focus from leaving a form until it is submitted.',
+			'Disabling focus on decorative elements.'
+		],
+		difficulty: 'hard',
+		category: 'html',
+		topic: 'accessibility'
 	}
 ]
 

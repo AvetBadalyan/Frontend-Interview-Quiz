@@ -28,7 +28,7 @@ sayHi();`,
 			`Lydia and ReferenceError`,
 			`ReferenceError and 21`
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'hoisting',
 		category: 'jstricky'
 	},
@@ -44,7 +44,7 @@ for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 1);
 }`,
 		answers: [`3 3 3 and 0 1 2`, `0 1 2 and 0 1 2`, `0 1 2 and 3 3 3`],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'event-loop',
 		category: 'jstricky'
 	},
@@ -68,7 +68,7 @@ console.log(shape.perimeter());`,
 			`20 and 63`,
 			`NaN and 63`
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'this',
 		category: 'jstricky'
 	},
@@ -159,7 +159,7 @@ console.log(b === c);`,
 const freddie = new Chameleon({ newColor: 'purple' });
 console.log(freddie.colorChange('orange'));`,
 		answers: [`TypeError`, `orange`, `purple`, `green`],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'prototype',
 		category: 'jstricky'
 	},
@@ -215,7 +215,7 @@ console.log(member.getFullName());`,
 			`Lydia Hallie`,
 			`undefined undefined`
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'prototype',
 		category: 'jstricky'
 	},
@@ -239,7 +239,7 @@ console.log(sarah);`,
 			`Person {firstName: "Lydia", lastName: "Hallie"} and {}`,
 			`Person {firstName: "Lydia", lastName: "Hallie"} and ReferenceError`
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'prototype',
 		category: 'jstricky'
 	},
@@ -314,7 +314,7 @@ getPersonInfo\`\${person} is \${age} years old\`;`,
 			`"Lydia" 21 ["", " is ", " years old"]`,
 			`"Lydia" ["", " is ", " years old"] 21`
 		],
-		difficulty: 'easy',
+		difficulty: 'hard',
 		topic: 'scope',
 		category: 'jstricky'
 	},
@@ -427,7 +427,7 @@ set.has(1);`,
 			`false true true true`,
 			`true true true true`
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'prototype',
 		category: 'jstricky'
 	},
@@ -504,7 +504,7 @@ a[c] = 456;
 
 console.log(a[b]);`,
 		answers: [`456`, `123`, `undefined`, `ReferenceError`],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'scope',
 		category: 'jstricky'
 	},
@@ -590,7 +590,7 @@ console.log(sayHi.bind(person, 21));`,
 			`function function`,
 			`Lydia is 21 Lydia is 21`
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'this',
 		category: 'jstricky'
 	},
@@ -676,7 +676,7 @@ console.log(numbers);`,
 			`1 1 2`,
 			`1 undefined undefined`
 		],
-		difficulty: 'easy',
+		difficulty: 'hard',
 		topic: 'prototype',
 		category: 'jstricky'
 	},
@@ -776,7 +776,7 @@ const gen = generator(10);
 console.log(gen.next().value);
 console.log(gen.next().value);`,
 		answers: [`10, 20`, `[0, 10], [10, 20]`, `20, 20`, `0, 10 and 10, 20`],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'es6',
 		category: 'jstricky'
 	},
@@ -794,7 +794,7 @@ const secondPromise = new Promise((res, rej) => {
 
 Promise.race([firstPromise, secondPromise]).then(res => console.log(res));`,
 		answers: [`"two"`, `"one"`, `"two" "one"`, `"one" "two"`],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		topic: 'event-loop',
 		category: 'jstricky'
 	},
@@ -957,7 +957,7 @@ console.log(typeof y);`,
 			`"object", "number"`,
 			`"number", "undefined"`
 		],
-		difficulty: 'medium',
+		difficulty: 'hard',
 		topic: 'types',
 		category: 'jstricky'
 	},
@@ -1152,7 +1152,7 @@ multiply(value);`,
 			`20, 40, 20, 40`,
 			`NaN, NaN, 20, 40`
 		],
-		difficulty: 'medium',
+		difficulty: 'hard',
 		topic: 'scope',
 		category: 'jstricky'
 	},
@@ -1167,7 +1167,7 @@ multiply(value);`,
 			`1 2 and 2 3 and 3 4`,
 			`1 undefined and 2 undefined and 3 undefined and 4 undefined`
 		],
-		difficulty: 'medium',
+		difficulty: 'hard',
 		topic: 'arrays',
 		category: 'jstricky'
 	},
@@ -1226,7 +1226,7 @@ export const sum = (a, b) => a + b;`,
 			`running sum.js, 3, running index.js`,
 			`running index.js, undefined, running sum.js`
 		],
-		difficulty: 'medium',
+		difficulty: 'hard',
 		topic: 'scope',
 		category: 'jstricky'
 	},
@@ -1300,7 +1300,7 @@ console.log(/* 2 */); // JavaScript loves you back ❤️`,
 			`game.next.value("Yes") and game.next.value()`,
 			`game.next.value() and game.next.value("Yes")`
 		],
-		difficulty: 'medium',
+		difficulty: 'hard',
 		topic: 'scope',
 		category: 'jstricky'
 	},
@@ -1514,7 +1514,7 @@ setTimeout(() => {
 			`"😍" and "😎"`,
 			`"😎" and "😎"`
 		],
-		difficulty: 'medium',
+		difficulty: 'hard',
 		topic: 'event-loop',
 		category: 'jstricky'
 	},

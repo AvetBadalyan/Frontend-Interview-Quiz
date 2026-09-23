@@ -1,6 +1,6 @@
 # Frontend Quiz
 
-An interactive frontend developer quiz app built with React 19. Tests knowledge across HTML, CSS, JavaScript, and React with timed questions, difficulty levels, and high score tracking.
+An interactive frontend developer quiz app built with React 19. Tests knowledge across HTML, CSS, JavaScript, React, and tricky JS output questions with timed rounds, difficulty levels, and high score tracking.
 
 **[Live Demo →](https://frontend-interview-quiz.vercel.app)**
 
@@ -8,9 +8,9 @@ An interactive frontend developer quiz app built with React 19. Tests knowledge 
 
 ## Features
 
-- **5 categories** — HTML, CSS, JavaScript, React, JS Tricky (250 questions total)
+- **5 categories** — HTML, CSS, JavaScript, React, JS Tricky (330 questions total)
 - **JS Tricky** — 155 output-prediction questions from [Lydia Hallie's javascript-questions](https://github.com/lydiahallie/javascript-questions) rendered in formatted code blocks
-- **3 difficulty levels** — Easy (30s / 10 questions), Medium (20s / 15), Hard (15s / 20)
+- **3 difficulty levels** — Easy (90s / 10 questions), Medium (90s / 15), Hard (90s / 20)
 - **Topic filters** — focus on specific areas within each category
 - **Timed questions** — per-question countdown with visual + audio warning at 5 seconds
 - **Instant feedback** — correct answer revealed after each selection

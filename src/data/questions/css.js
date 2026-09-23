@@ -406,6 +406,123 @@ export default [
 		],
 		difficulty: 'hard',
 		category: 'css',
+		topic: 'selectors'
+	},
+	{
+		id: 'css-035',
+		text: 'What is the difference between "display: none" and "visibility: hidden"?',
+		answers: [
+			'display: none removes the element from the layout entirely; visibility: hidden hides it but it still occupies space.',
+			'They are identical in effect.',
+			'visibility: hidden removes the element from the layout; display: none keeps the space.',
+			'display: none only hides on screen; visibility: hidden hides in print too.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'selectors'
+	},
+	{
+		id: 'css-036',
+		text: 'What does "will-change: transform" tell the browser?',
+		answers: [
+			'The element is expected to change its transform, so the browser can promote it to its own compositor layer in advance.',
+			'The transform will animate indefinitely.',
+			'The element should never be transformed.',
+			'It forces hardware acceleration on all CSS properties.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'animations'
+	},
+	{
+		id: 'css-037',
+		text: 'What is a "stacking context" in CSS?',
+		answers: [
+			'A self-contained layer in which z-index comparisons are made; elements outside the context cannot interleave with elements inside it.',
+			'The order in which CSS rules are applied.',
+			'The z-index value of the root element.',
+			'A stack of stylesheets loaded by the browser.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'selectors'
+	},
+	{
+		id: 'css-038',
+		text: 'What does "minmax(100px, 1fr)" mean in grid-template-columns?',
+		answers: [
+			'The column is at least 100px wide but can grow to fill available space proportionally.',
+			'The column alternates between 100px and 1fr on each row.',
+			'The column is exactly the average of 100px and 1fr.',
+			'It creates two columns: one 100px and one 1fr.'
+		],
+		difficulty: 'hard',
+		category: 'css',
 		topic: 'grid'
+	},
+	{
+		id: 'css-039',
+		text: 'What property controls whether a CSS animation resets or holds the last keyframe state after it ends?',
+		answers: [
+			'animation-fill-mode',
+			'animation-iteration-count',
+			'animation-play-state',
+			'animation-direction'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'animations'
+	},
+	{
+		id: 'css-040',
+		text: 'What does "isolation: isolate" do?',
+		answers: [
+			'Creates a new stacking context without requiring position, z-index, or opacity, preventing mix-blend-mode from bleeding to elements outside.',
+			'Prevents the element from being affected by inherited styles.',
+			'Isolates the element into its own CSS layer.',
+			'Removes the element from the flex or grid flow.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'selectors'
+	},
+	{
+		id: 'css-041',
+		text: 'What is the difference between "auto" and "1fr" in a grid track size?',
+		answers: [
+			'auto sizes to fit content (or available space after fixed tracks); 1fr distributes only the remaining free space after all auto and fixed tracks are resolved.',
+			'They are interchangeable.',
+			'1fr always produces a wider column than auto.',
+			'auto is only valid in rows; 1fr is only valid in columns.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'grid'
+	},
+	{
+		id: 'css-042',
+		text: 'How does specificity work when two rules target the same element and both have "!important"?',
+		answers: [
+			'The rule with higher specificity wins; if specificity is equal, the later rule in the stylesheet wins.',
+			'!important always makes the first rule win.',
+			'!important cancels out and the browser ignores both rules.',
+			'The rule with lower specificity wins when both have !important.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'selectors'
+	},
+	{
+		id: 'css-043',
+		text: 'What does "transform-origin" control?',
+		answers: [
+			'The point around which a CSS transform (rotate, scale, etc.) is applied.',
+			'The starting position of a CSS animation.',
+			'The origin element from which a transform is inherited.',
+			'The axis along which 3D transforms are calculated.'
+		],
+		difficulty: 'hard',
+		category: 'css',
+		topic: 'animations'
 	}
 ]

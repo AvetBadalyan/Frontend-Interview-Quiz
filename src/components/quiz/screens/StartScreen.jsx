@@ -3,7 +3,10 @@ import { useQuiz } from '../../../context/QuizContext.jsx'
 import { useSound } from '../../../context/SoundContext.jsx'
 import { DIFFICULTY_CONFIG } from '../../../data/constants.js'
 import { useHighScores } from '../../../hooks/useHighScores.js'
-import { selectQuestions } from '../../../services/questionService.js'
+import {
+	countAvailableQuestions,
+	selectQuestions
+} from '../../../services/questionService.js'
 import { HighScoreDisplay } from '../../feedback/HighScoreDisplay.jsx'
 import { AnimatedPage } from '../../layout/AnimatedPage.jsx'
 import { Button } from '../../ui/Button.jsx'
@@ -96,9 +99,18 @@ export function StartScreen() {
 
 	const getDifficultyInfo = diffKey => {
 		const config = DIFFICULTY_CONFIG[diffKey]
+		// When a category is already chosen, show the exact number of questions
+		// the quiz will actually serve (pool size capped at the target count).
+		// Without a category we don't know the pool yet, so show the maximum.
+		const questionCount = category
+			? Math.min(
+					countAvailableQuestions(category, diffKey, selectedTopics),
+					config.questionCount
+				)
+			: config.questionCount
 		return {
 			label: config.label,
-			description: `${config.timerDuration / 1000} seconds, ${config.questionCount} questions`
+			description: `${config.timerDuration / 1000}s per question, ${questionCount} question${questionCount === 1 ? '' : 's'}`
 		}
 	}
 
@@ -114,7 +126,8 @@ export function StartScreen() {
 			>
 				<h2 className="start-screen__title">Frontend Quiz</h2>
 				<p className="start-screen__subtitle">
-					Test your knowledge across HTML, CSS, JavaScript, and React
+					Test your knowledge across HTML, CSS, JavaScript, React, and tricky JS
+					output questions
 				</p>
 
 				<CategorySelector selected={category} onSelect={handleCategorySelect} />

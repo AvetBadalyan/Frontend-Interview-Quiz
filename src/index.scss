@@ -165,7 +165,7 @@ body {
 
 	&:hover:not(:disabled),
 	&:focus:not(:disabled) {
-		background: rgba(144, 130, 163, 0.1);
+		background: rgba($color-surface, 0.15);
 		color: $color-text-light;
 		border-color: $color-text-light;
 	}
@@ -379,7 +379,7 @@ body {
 		padding: 1.25rem 1rem;
 		border: 2px solid $color-surface;
 		border-radius: 12px;
-		background: rgba(106, 85, 138, 0.2);
+		background: rgba($color-surface, 0.2);
 		cursor: pointer;
 		transition:
 			border-color 0.2s ease-in-out,
@@ -389,7 +389,7 @@ body {
 
 		&:hover {
 			border-color: var(--category-color, $color-text-dim);
-			background: rgba(106, 85, 138, 0.35);
+			background: rgba($color-surface, 0.35);
 			transform: translateY(-2px);
 		}
 
@@ -400,7 +400,7 @@ body {
 
 		&--selected {
 			border-color: var(--category-color, $color-primary);
-			background: rgba(161, 126, 218, 0.25);
+			background: rgba($color-primary, 0.25);
 			// Solid glow tinted with the category colour (rgba() can't wrap a
 			// var/hex, so we use the colour directly and let the blur soften it).
 			box-shadow:
@@ -408,7 +408,7 @@ body {
 				inset 0 0 0 1px var(--category-color, $color-primary);
 
 			&:hover {
-				background: rgba(161, 126, 218, 0.35);
+				background: rgba($color-primary, 0.35);
 			}
 		}
 	}
@@ -437,7 +437,7 @@ body {
 	align-items: center;
 	gap: 0.25rem;
 	padding: 0.75rem 1.25rem;
-	background: rgba(106, 85, 138, 0.3);
+	background: rgba($color-surface, 0.3);
 	border: 1px solid $color-surface;
 	border-radius: 8px;
 
@@ -486,8 +486,8 @@ body {
 	color: $color-ink-soft;
 	border-radius: 24px;
 	box-shadow:
-		0 4px 16px rgba(231, 129, 251, 0.4),
-		0 0 24px rgba(248, 229, 156, 0.3);
+		0 4px 16px rgba($color-accent, 0.4),
+		0 0 24px rgba($color-gold, 0.3);
 	margin: 1rem 0;
 }
 
@@ -620,7 +620,7 @@ body {
 		gap: 0.25rem;
 		margin: 1.5rem 0;
 		padding: 1rem 2rem;
-		background: rgba(106, 85, 138, 0.3);
+		background: rgba($color-surface, 0.3);
 		border-radius: 12px;
 	}
 
@@ -764,8 +764,8 @@ body {
 		font-family: $font-body;
 		font-size: 0.875rem;
 		color: $color-danger;
-		background: rgba(245, 90, 152, 0.1);
-		border: 1px solid rgba(245, 90, 152, 0.3);
+		background: rgba($color-danger, 0.1);
+		border: 1px solid rgba($color-danger, 0.3);
 		border-radius: 8px;
 		padding: 0.75rem 1rem;
 		margin: 1rem 0;
@@ -775,8 +775,8 @@ body {
 		font-family: $font-body;
 		font-size: 0.875rem;
 		color: $color-warning;
-		background: rgba(245, 167, 108, 0.1);
-		border: 1px solid rgba(245, 167, 108, 0.3);
+		background: rgba($color-warning, 0.1);
+		border: 1px solid rgba($color-warning, 0.3);
 		border-radius: 8px;
 		padding: 0.75rem 1rem;
 		margin: 1rem 0;
@@ -822,7 +822,7 @@ body {
 		padding: 1rem 1.5rem;
 		border: 2px solid $color-surface;
 		border-radius: 12px;
-		background: rgba(106, 85, 138, 0.2);
+		background: rgba($color-surface, 0.2);
 		cursor: pointer;
 		transition:
 			border-color 0.2s ease-in-out,
@@ -832,7 +832,7 @@ body {
 
 		&:hover {
 			border-color: $color-primary;
-			background: rgba(106, 85, 138, 0.35);
+			background: rgba($color-surface, 0.35);
 			transform: translateY(-2px);
 		}
 
@@ -843,13 +843,13 @@ body {
 
 		&--selected {
 			border-color: $color-primary;
-			background: rgba(161, 126, 218, 0.25);
+			background: rgba($color-primary, 0.25);
 			box-shadow:
-				0 0 12px rgba(161, 126, 218, 0.3),
+				0 0 12px rgba($color-primary, 0.3),
 				inset 0 0 0 1px $color-primary;
 
 			&:hover {
-				background: rgba(161, 126, 218, 0.35);
+				background: rgba($color-primary, 0.35);
 			}
 		}
 	}
@@ -898,7 +898,7 @@ body {
 		padding: 0.5rem 1rem;
 		border: 1px solid $color-surface;
 		border-radius: 24px;
-		background: rgba(106, 85, 138, 0.2);
+		background: rgba($color-surface, 0.2);
 		color: $color-text-muted;
 		cursor: pointer;
 		transition:
@@ -908,7 +908,7 @@ body {
 
 		&:hover {
 			border-color: $color-text-dim;
-			background: rgba(106, 85, 138, 0.35);
+			background: rgba($color-surface, 0.35);
 		}
 
 		&:focus {
@@ -918,11 +918,11 @@ body {
 
 		&--selected {
 			border-color: $color-primary-bright;
-			background: rgba(142, 118, 250, 0.3);
+			background: rgba($color-primary-bright, 0.3);
 			color: $color-text;
 
 			&:hover {
-				background: rgba(142, 118, 250, 0.4);
+				background: rgba($color-primary-bright, 0.4);
 			}
 		}
 	}
@@ -1108,14 +1108,14 @@ body {
 	0%,
 	100% {
 		text-shadow:
-			0 0 5px rgba(248, 229, 156, 0.5),
-			0 0 10px rgba(248, 229, 156, 0.3);
+			0 0 5px rgba($color-gold, 0.5),
+			0 0 10px rgba($color-gold, 0.3);
 	}
 	50% {
 		text-shadow:
-			0 0 10px rgba(248, 229, 156, 0.8),
-			0 0 20px rgba(231, 129, 251, 0.5),
-			0 0 30px rgba(142, 118, 250, 0.3);
+			0 0 10px rgba($color-gold, 0.8),
+			0 0 20px rgba($color-accent, 0.5),
+			0 0 30px rgba($color-primary-bright, 0.3);
 	}
 }
 
@@ -1175,11 +1175,11 @@ body {
 			cursor: pointer;
 			padding: 0.5rem;
 			border-radius: 4px;
-			background: rgba(106, 85, 138, 0.2);
+			background: rgba($color-surface, 0.2);
 			margin-bottom: 0.5rem;
 
 			&:hover {
-				background: rgba(106, 85, 138, 0.35);
+				background: rgba($color-surface, 0.35);
 			}
 		}
 	}

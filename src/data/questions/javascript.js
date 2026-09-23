@@ -149,7 +149,7 @@ export default [
 		id: 'js-012',
 		text: 'What does "typeof []" return?',
 		answers: ['"object"', '"array"', '"list"', '"undefined"'],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		category: 'javascript',
 		topic: 'arrays'
 	},
@@ -297,9 +297,9 @@ export default [
 			'They are identical.',
 			'=== only works with numbers.'
 		],
-		difficulty: 'medium',
+		difficulty: 'easy',
 		category: 'javascript',
-		topic: 'closures'
+		topic: 'arrays'
 	},
 
 	// ==================== HARD ====================
@@ -354,12 +354,12 @@ export default [
 		id: 'js-029',
 		text: 'What does event.stopPropagation() do?',
 		answers: [
-			'Stops the event from bubbling up to ancestor elements.',
+			'Stops the event from propagating further through the DOM (bubbling up or capturing down).',
 			'Prevents the default action of the event.',
 			'Removes the event listener.',
 			'Cancels all pending events.'
 		],
-		difficulty: 'hard',
+		difficulty: 'medium',
 		category: 'javascript',
 		topic: 'dom'
 	},
@@ -372,7 +372,7 @@ export default [
 			'[3, 2, 1]',
 			'Set { 1, 2, 3 }'
 		],
-		difficulty: 'hard',
+		difficulty: 'medium',
 		category: 'javascript',
 		topic: 'arrays'
 	},
@@ -425,5 +425,135 @@ export default [
 		difficulty: 'hard',
 		category: 'javascript',
 		topic: 'promises'
+	},
+	{
+		id: 'js-036',
+		text: 'What does Object.freeze() do, and what does it NOT prevent?',
+		answers: [
+			'It prevents adding, removing, or reassigning own properties — but it does not deep-freeze: nested object properties can still be mutated.',
+			'It makes the object and all nested objects completely immutable.',
+			'It only prevents adding new properties; existing ones can still be changed.',
+			'It converts the object to a primitive value.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'arrays'
+	},
+	{
+		id: 'js-037',
+		text: 'What is the output of this code?\n\nconst obj = {};\nobj.__proto__.greet = "hello";\nconst obj2 = {};\nconsole.log(obj2.greet);',
+		answers: [
+			'"hello" — because greet was added to Object.prototype, which all plain objects inherit.',
+			'undefined — obj2 has no greet property.',
+			'ReferenceError',
+			'"hello" only if obj2 was created after obj.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'closures'
+	},
+	{
+		id: 'js-038',
+		text: 'What is the difference between null and undefined in JavaScript?',
+		answers: [
+			'undefined means a variable has been declared but not assigned a value; null is an intentional assignment representing "no value".',
+			'They are identical — both mean "no value".',
+			'null means undeclared; undefined means declared but empty.',
+			'undefined is only produced by the engine; you can never assign it manually.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'closures'
+	},
+	{
+		id: 'js-039',
+		text: 'What is the prototype chain, and how does property lookup work?',
+		answers: [
+			"When a property is not found on an object, JavaScript looks up its prototype, then the prototype's prototype, until null is reached.",
+			"Every object has a copy of all its prototype's properties.",
+			'The prototype chain only applies to class instances, not plain objects.',
+			'Property lookup starts at Object.prototype and works down to the object.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'closures'
+	},
+	{
+		id: 'js-040',
+		text: 'What does Array.prototype.flat() do, and what is the default depth?',
+		answers: [
+			'Recursively flattens nested arrays to a given depth; the default depth is 1.',
+			'Flattens all nesting regardless of depth by default.',
+			'Converts an array to a comma-separated string.',
+			'Removes all falsy values from the array.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'arrays'
+	},
+	{
+		id: 'js-041',
+		text: 'What does "this" refer to inside an arrow function?',
+		answers: [
+			'The value of "this" from the enclosing lexical scope where the arrow function was defined — it cannot be rebound.',
+			'The object the arrow function is a method of.',
+			'The global object, always.',
+			'undefined, always.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'closures'
+	},
+	{
+		id: 'js-042',
+		text: 'What is a WeakMap and how does it differ from Map?',
+		answers: [
+			'WeakMap keys must be objects and are held weakly — if no other reference to the key exists, it can be garbage-collected. Map keys can be any type and are held strongly.',
+			'WeakMap is just a Map with fewer features.',
+			'WeakMap keys are strings; Map keys are objects.',
+			'WeakMap prevents keys from being overwritten; Map allows it.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'arrays'
+	},
+	{
+		id: 'js-043',
+		text: 'What is the Temporal Dead Zone (TDZ)?',
+		answers: [
+			'The period between the start of a block scope and the point where a let or const declaration is initialised — accessing the variable during this period throws a ReferenceError.',
+			'The time between when a Promise is created and when it resolves.',
+			'A scope where var variables are temporarily undefined.',
+			'A period where setTimeout callbacks are queued but not yet executed.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'closures'
+	},
+	{
+		id: 'js-044',
+		text: 'What does structuredClone() do that JSON.parse(JSON.stringify()) does not handle correctly?',
+		answers: [
+			'structuredClone correctly clones Dates, Maps, Sets, ArrayBuffers, circular references, and undefined values; JSON round-trip converts Dates to strings, loses Maps/Sets/undefined, and throws on circular refs.',
+			'structuredClone is faster but otherwise identical to JSON round-trip.',
+			'structuredClone only works on primitive values.',
+			'JSON.parse(JSON.stringify()) is always the better option for deep cloning.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'arrays'
+	},
+	{
+		id: 'js-045',
+		text: 'What does the "in" operator check?',
+		answers: [
+			'Whether a property exists on an object or anywhere in its prototype chain.',
+			'Whether a value exists inside an array.',
+			'Whether a variable is defined in the current scope.',
+			'Whether an object is an instance of a class.'
+		],
+		difficulty: 'hard',
+		category: 'javascript',
+		topic: 'closures'
 	}
 ]

@@ -481,6 +481,97 @@ const reactQuestions = [
 		difficulty: 'hard',
 		category: 'react',
 		topic: 'hooks'
+	},
+	{
+		id: 'react-038',
+		text: 'What is React Suspense used for?',
+		answers: [
+			'To declaratively show a fallback UI while waiting for something (lazy-loaded components or async data) to be ready.',
+			'To pause all rendering and wait for all promises to resolve.',
+			'To catch errors in the component tree.',
+			'To defer state updates until the next render cycle.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-039',
+		text: 'What is the difference between useImperativeHandle and useRef?',
+		answers: [
+			'useImperativeHandle customises the ref value exposed to a parent when used with forwardRef; useRef just creates a mutable ref object.',
+			'They are identical.',
+			'useRef works only on DOM elements; useImperativeHandle works on components.',
+			'useImperativeHandle prevents the component from re-rendering when the ref changes.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-040',
+		text: 'When does React batch state updates, and what changed in React 18?',
+		answers: [
+			'Before React 18, batching only happened inside React event handlers. React 18 introduced automatic batching everywhere, including in setTimeout, Promises, and native event handlers.',
+			'React has always batched all state updates everywhere.',
+			'React 18 removed batching to make updates more predictable.',
+			'Batching only applies to useReducer, not useState.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'state'
+	},
+	{
+		id: 'react-041',
+		text: 'What is the difference between controlled and uncontrolled components, and when would you use an uncontrolled one?',
+		answers: [
+			'Controlled components store input value in React state; uncontrolled use a ref to read the DOM value. Uncontrolled components are useful for simple forms, file inputs, or when integrating with non-React code.',
+			'Uncontrolled components cannot be used with forms.',
+			'Controlled components are only for class components.',
+			'There is no practical difference — both access the DOM value the same way.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'state'
+	},
+	{
+		id: 'react-042',
+		text: 'What does React.lazy() do and what must accompany it?',
+		answers: [
+			'It lets you dynamically import a component so its code is only loaded when rendered. It must be wrapped in a <Suspense> boundary with a fallback.',
+			'It memoizes a component to prevent re-renders.',
+			'It defers rendering of a component until the next idle frame.',
+			'It loads a component from a CDN automatically.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-043',
+		text: 'What is the purpose of the useId hook?',
+		answers: [
+			'To generate a stable, unique ID per component instance that is consistent between server and client, useful for accessibility attributes like htmlFor/aria-describedby.',
+			'To create a unique key for list items.',
+			'To generate a random ID on every render.',
+			'To assign a unique ID to the DOM node of a component.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-044',
+		text: 'What is "prop drilling" and what are two ways to avoid it?',
+		answers: [
+			'Passing props through many intermediate components that do not use them. Solutions include the Context API for global-ish data, or component composition (passing components as children/props).',
+			'Passing too many props to a single component. Solve it by using default props.',
+			'Drilling into an object prop with dot notation. Solved with destructuring.',
+			'A performance issue caused by large prop objects. Solved with React.memo.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
 	}
 ]
 
