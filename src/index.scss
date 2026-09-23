@@ -1090,36 +1090,6 @@ body {
 }
 
 /* ========================================
-   Confetti fallback text (canvas-confetti unavailable)
-   ======================================== */
-.confetti-fallback {
-	font-family: $font-heading;
-	font-size: 1.5rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	color: $color-gold;
-	text-align: center;
-	margin: 1rem 0;
-	animation: celebration-glow 1.5s ease-in-out infinite;
-}
-
-@keyframes celebration-glow {
-	0%,
-	100% {
-		text-shadow:
-			0 0 5px rgba($color-gold, 0.5),
-			0 0 10px rgba($color-gold, 0.3);
-	}
-	50% {
-		text-shadow:
-			0 0 10px rgba($color-gold, 0.8),
-			0 0 20px rgba($color-accent, 0.5),
-			0 0 30px rgba($color-primary-bright, 0.3);
-	}
-}
-
-/* ========================================
    Error Boundary
    ======================================== */
 .error-boundary {
@@ -1490,8 +1460,7 @@ select:focus-visible,
 	}
 
 	.progress-bar__fill--warning,
-	.question-timer__seconds--warning,
-	.confetti-fallback {
+	.question-timer__seconds--warning {
 		animation: none;
 	}
 }
@@ -1521,54 +1490,4 @@ select:focus-visible,
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border: 0;
-}
-
-/* ========================================
-   Animation utility classes
-   ======================================== */
-@keyframes slide-in-from-bottom {
-	from {
-		opacity: 0;
-		transform: translateY(10%);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes pop {
-	0% {
-		transform: scale(0.8);
-		opacity: 0;
-	}
-	70% {
-		transform: scale(1.1);
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
-
-.animate-slide-in-bottom {
-	animation: slide-in-from-bottom 0.5s ease-out;
-}
-.animate-fade-in {
-	animation: fade-in 0.3s ease-out;
-}
-.animate-pop {
-	animation: pop 0.3s ease-out;
-}
-.animate-shake {
-	animation: error-shake 0.5s ease-in-out;
 }
