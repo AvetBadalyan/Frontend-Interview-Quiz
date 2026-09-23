@@ -20,17 +20,17 @@ export const TIMER_WARNING_THRESHOLD = 5000
 export const DIFFICULTY_CONFIG = {
 	easy: {
 		label: 'Easy',
-		timerDuration: 30000,
+		timerDuration: 90000,
 		questionCount: 10
 	},
 	medium: {
 		label: 'Medium',
-		timerDuration: 20000,
+		timerDuration: 90000,
 		questionCount: 15
 	},
 	hard: {
 		label: 'Hard',
-		timerDuration: 15000,
+		timerDuration: 90000,
 		questionCount: 20
 	}
 }

@@ -62,23 +62,6 @@ export default [
 		}
 	},
 
-	// Test files — vitest globals are injected via vite.config.js globals:true
-	{
-		files: ['**/*.test.{js,jsx}', 'src/test/**'],
-		languageOptions: {
-			globals: {
-				vi: 'readonly',
-				describe: 'readonly',
-				it: 'readonly',
-				expect: 'readonly',
-				beforeEach: 'readonly',
-				afterEach: 'readonly',
-				beforeAll: 'readonly',
-				afterAll: 'readonly'
-			}
-		}
-	},
-
 	// Node.js scripts (generate-sounds etc.)
 	{
 		files: ['scripts/**/*.mjs', 'scripts/**/*.js'],

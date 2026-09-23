@@ -25,7 +25,6 @@ An interactive frontend developer quiz app built with React 19. Tests knowledge 
 - **Framer Motion** — page transitions and staggered answer animations
 - **SCSS** — design tokens, BEM naming, responsive layout, dark theme
 - **Vite** — build tool and dev server
-- **Vitest + React Testing Library** — 158 tests across hooks, services, and screens
 
 ## Getting started
 
@@ -38,15 +37,13 @@ npm run dev
 
 ## Scripts
 
-| Command            | Description              |
-| ------------------ | ------------------------ |
-| `npm run dev`      | Start dev server         |
-| `npm run build`    | Production build         |
-| `npm run preview`  | Preview production build |
-| `npm run test`     | Run tests in watch mode  |
-| `npm run test:run` | Run tests once           |
-| `npm run lint`     | ESLint check             |
-| `npm run format`   | Prettier format          |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start dev server         |
+| `npm run build`   | Production build         |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | ESLint check             |
+| `npm run format`  | Prettier format          |
 
 ## Project structure
 
