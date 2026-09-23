@@ -1,3 +1,5 @@
+import './QuestionProgress.scss'
+
 /**
  * Displays the current question number out of the total.
  *

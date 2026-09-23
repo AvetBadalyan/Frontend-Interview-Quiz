@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { forwardRef } from 'react'
+import './Button.scss'
 
 /**
  * Animated button component with Framer Motion animations

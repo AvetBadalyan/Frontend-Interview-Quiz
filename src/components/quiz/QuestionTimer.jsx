@@ -14,6 +14,7 @@ import { useSound } from '../../context/SoundContext.jsx'
 import { TIMER_WARNING_THRESHOLD } from '../../data/constants.js'
 import { useTimer } from '../../hooks/useTimer.js'
 import { ProgressBar } from '../ui/ProgressBar.jsx'
+import './QuestionTimer.scss'
 
 /**
  * Question timer component with visual countdown

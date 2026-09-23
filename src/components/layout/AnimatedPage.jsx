@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { pageTransition, pageVariants } from '../../utils/animations.js'
+import './AnimatedPage.scss'
 
 /**
  * Animates a screen in and out. Each screen wraps its content in this, and the

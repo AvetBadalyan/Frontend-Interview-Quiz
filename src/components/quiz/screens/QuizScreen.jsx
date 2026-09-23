@@ -10,6 +10,7 @@ import { AnimatedPage } from '../../layout/AnimatedPage.jsx'
 import { Answers } from '../Answers.jsx'
 import { QuestionProgress } from '../QuestionProgress.jsx'
 import { QuestionTimer } from '../QuestionTimer.jsx'
+import './QuizScreen.scss'
 
 // How long (ms) feedback colours are shown before moving to the next question
 const FEEDBACK_DELAY = 2000

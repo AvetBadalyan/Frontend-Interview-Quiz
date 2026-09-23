@@ -1,0 +1,209 @@
+@use '../../../styles/tokens' as *;
+
+// ========================================
+// Start Screen
+// ========================================
+
+.start-screen {
+	max-width: 50rem;
+	margin: auto;
+	padding: 2rem;
+	background: linear-gradient(
+		180deg,
+		$color-panel-start 0%,
+		$color-panel-end 100%
+	);
+	border-radius: 8px;
+	box-shadow: $shadow-panel;
+	text-align: center;
+
+	&__title {
+		font-family: $font-heading;
+		font-size: 2rem;
+		font-weight: bold;
+		margin: 0 0 0.5rem 0;
+		text-transform: uppercase;
+		background: linear-gradient(
+			90deg,
+			$color-accent 40%,
+			$color-primary-bright 60%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	&__subtitle {
+		font-family: $font-body;
+		font-size: 1rem;
+		color: $color-text-muted;
+		margin: 0 0 2rem 0;
+	}
+
+	&__high-score {
+		margin: 1.5rem 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__actions {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	&__hint {
+		font-family: $font-heading;
+		font-size: 0.875rem;
+		color: $color-text-dim;
+		margin: 0;
+	}
+
+	&__error {
+		font-family: $font-body;
+		font-size: 0.875rem;
+		color: $color-danger;
+		background: rgba($color-danger, 0.1);
+		border: 1px solid rgba($color-danger, 0.3);
+		border-radius: 8px;
+		padding: 0.75rem 1rem;
+		margin: 1rem 0;
+	}
+
+	&__warning {
+		font-family: $font-body;
+		font-size: 0.875rem;
+		color: $color-warning;
+		background: rgba($color-warning, 0.1);
+		border: 1px solid rgba($color-warning, 0.3);
+		border-radius: 8px;
+		padding: 0.75rem 1rem;
+		margin: 1rem 0;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+// ========================================
+// Difficulty Selector
+// ========================================
+
+.difficulty-selector {
+	margin: 1.5rem 0;
+
+	h3 {
+		font-family: $font-heading;
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: $color-text-dim;
+		margin: 0 0 1rem 0;
+		letter-spacing: 0.05rem;
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+
+		@media (min-width: 500px) {
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+
+	&__option {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.25rem;
+		padding: 1rem 1.5rem;
+		border: 2px solid $color-surface;
+		border-radius: 12px;
+		background: rgba($color-surface, 0.2);
+		cursor: pointer;
+		transition:
+			border-color 0.2s ease-in-out,
+			background-color 0.2s ease-in-out,
+			transform 0.15s ease-in-out;
+		flex: 1;
+
+		&:hover {
+			border-color: $color-primary;
+			background: rgba($color-surface, 0.35);
+			transform: translateY(-2px);
+		}
+
+		&:focus {
+			outline: 2px solid $color-accent;
+			outline-offset: 2px;
+		}
+
+		&--selected {
+			border-color: $color-primary;
+			background: rgba($color-primary, 0.25);
+			box-shadow:
+				0 0 12px rgba($color-primary, 0.3),
+				inset 0 0 0 1px $color-primary;
+
+			&:hover {
+				background: rgba($color-primary, 0.35);
+			}
+		}
+	}
+
+	&__label {
+		font-family: $font-heading;
+		font-size: 1rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		color: $color-text-muted;
+	}
+
+	&__info {
+		font-family: $font-body;
+		font-size: 0.75rem;
+		color: $color-text-dim;
+	}
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 768px) {
+	.start-screen {
+		padding: 1.5rem;
+		margin: 1rem auto;
+	}
+
+	.difficulty-selector__options {
+		flex-direction: column;
+	}
+
+	.difficulty-selector__option {
+		min-height: 44px;
+	}
+}
+
+@media (max-width: 480px) {
+	.start-screen {
+		padding: 1rem;
+		border-radius: 8px;
+	}
+}
+
+@media (max-width: 360px) {
+	.start-screen__subtitle {
+		display: none;
+	}
+
+	.difficulty-selector__info {
+		font-size: 0.75rem;
+	}
+}

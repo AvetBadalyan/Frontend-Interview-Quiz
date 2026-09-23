@@ -3,6 +3,7 @@ import {
 	answersContainerVariants,
 	answerVariants
 } from '../../utils/animations.js'
+import './Answers.scss'
 
 /**
  * Answers component — renders the list of answer buttons with feedback highlighting.

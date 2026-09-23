@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import './ErrorBoundary.scss'
 
 /**
  * ErrorFallback - Pure functional component for error display

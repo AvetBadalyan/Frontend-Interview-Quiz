@@ -1,3 +1,5 @@
+import './HighScoreDisplay.scss'
+
 /**
  * High score display component
  * Shows the high score for a specific category/difficulty combination

@@ -1,0 +1,243 @@
+@use '../../../styles/tokens' as *;
+
+// ========================================
+// Summary Screen
+// ========================================
+
+#summary {
+	max-width: 40rem;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: linear-gradient(
+		180deg,
+		$color-panel-start 0%,
+		$color-panel-end 100%
+	);
+	color: $color-text;
+	border-radius: 8px;
+	box-shadow: $shadow-panel;
+
+	img {
+		display: block;
+		width: 8rem;
+		height: 8rem;
+		object-fit: contain;
+		margin: 0 auto 1rem auto;
+		padding: 1rem;
+		filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+		border: 2px solid $color-primary;
+		border-radius: 50%;
+		background: $color-surface-deeper;
+	}
+
+	h2 {
+		font-family: $font-body;
+		font-size: 3rem;
+		text-align: center;
+		margin: 0;
+		text-transform: uppercase;
+		color: $color-text;
+	}
+
+	.question {
+		margin: 0.25rem 0;
+		font-size: 1rem;
+		color: $color-text-muted;
+	}
+
+	.user-answer {
+		margin: 0.25rem 0;
+		font-family: $font-heading;
+		font-weight: bold;
+		color: $color-text;
+
+		&.correct {
+			color: $color-success;
+		}
+		&.wrong {
+			color: $color-danger;
+		}
+		&.skipped {
+			color: $color-text-muted;
+			font-weight: normal;
+		}
+	}
+}
+
+#summary-stats {
+	display: flex;
+	gap: 3rem;
+	width: 60%;
+	margin: 2rem auto;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid $color-surface;
+
+	p {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.number {
+		font-family: $font-heading;
+		font-size: 3rem;
+		color: $color-primary;
+	}
+
+	.text {
+		font-family: $font-heading;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		color: $color-text-muted;
+		margin-top: -0.7rem;
+		margin-left: 0.2rem;
+		letter-spacing: 0.1rem;
+	}
+}
+
+.summary-screen {
+	&__meta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+		font-family: $font-heading;
+		font-size: 0.875rem;
+		color: $color-text-muted;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+	}
+
+	&__separator {
+		color: $color-text-dim;
+	}
+
+	&__category,
+	&__difficulty {
+		font-weight: bold;
+	}
+
+	&__time {
+		color: $color-text-dim;
+	}
+
+	&__score {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.25rem;
+		margin: 1.5rem 0;
+		padding: 1rem 2rem;
+		background: rgba($color-surface, 0.3);
+		border-radius: 12px;
+	}
+
+	&__score-label {
+		font-family: $font-heading;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		color: $color-text-muted;
+	}
+
+	&__score-value {
+		font-family: $font-heading;
+		font-size: 3rem;
+		font-weight: bold;
+		color: $color-text;
+		line-height: 1;
+	}
+
+	&__score-detail {
+		font-family: $font-heading;
+		font-size: 0.875rem;
+		color: $color-text-muted;
+	}
+
+	&__high-score {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0 2rem;
+	}
+
+	&__questions {
+		list-style: none;
+		margin: 2rem auto;
+		padding: 0;
+		text-align: center;
+
+		li {
+			margin: 2rem 0;
+		}
+
+		h3 {
+			font-family: $font-heading;
+			font-size: 1rem;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $color-primary;
+			color: $color-ink;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+		}
+
+		.question {
+			margin: 0.25rem 0;
+			font-size: 1rem;
+			color: $color-text-muted;
+		}
+
+		.correct-answer {
+			margin: 0.25rem 0;
+			font-family: $font-heading;
+			font-size: 0.875rem;
+			color: $color-success;
+			font-style: italic;
+		}
+	}
+
+	&__actions {
+		margin-top: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 768px) {
+	#summary {
+		padding: 1.5rem;
+		margin: 1rem auto;
+	}
+
+	// Summary stats — stack on mobile
+	#summary-stats {
+		flex-direction: column;
+		gap: 1.5rem;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	#summary {
+		padding: 1rem;
+		border-radius: 8px;
+	}
+
+	#summary h2 {
+		font-size: 2rem;
+	}
+	#summary-stats .number {
+		font-size: 2rem;
+	}
+}

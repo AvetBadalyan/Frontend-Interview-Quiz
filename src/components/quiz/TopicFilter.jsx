@@ -3,6 +3,7 @@ import {
 	countAvailableQuestions,
 	getTopicsForCategory
 } from '../../services/questionService.js'
+import './TopicFilter.scss'
 
 /**
  * Topic filter component

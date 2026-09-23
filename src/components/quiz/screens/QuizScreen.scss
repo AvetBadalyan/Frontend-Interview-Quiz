@@ -1,0 +1,82 @@
+@use '../../../styles/tokens' as *;
+
+// ========================================
+// Quiz Screen
+// ========================================
+
+.quiz-screen {
+	max-width: 50rem;
+	margin: auto;
+	padding: 2rem;
+	background: linear-gradient(
+		180deg,
+		$color-panel-start 0%,
+		$color-panel-end 100%
+	);
+	border-radius: 8px;
+	box-shadow: $shadow-panel;
+	text-align: center;
+
+	.question__text {
+		font-family: $font-body;
+		font-size: 1.5rem;
+		font-weight: normal;
+		margin: 0.5rem 0 1.25rem 0;
+		color: $color-text-muted;
+	}
+
+	.question__code {
+		margin: 0 0 2rem 0;
+		padding: 1rem 1.25rem;
+		background: rgba(0, 0, 0, 0.35);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		border-radius: 8px;
+		text-align: left;
+		overflow-x: auto;
+
+		code {
+			display: block;
+			font-family: $font-mono;
+			font-size: 0.875rem;
+			line-height: 1.6;
+			color: $color-text;
+			white-space: pre;
+		}
+	}
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 768px) {
+	.quiz-screen {
+		padding: 1.5rem;
+		margin: 1rem auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.quiz-screen {
+		padding: 1rem;
+		border-radius: 8px;
+	}
+
+	// On small screens, wrap long code lines instead of clipping them so
+	// JS Tricky questions stay fully readable without horizontal scrolling.
+	.quiz-screen .question__code {
+		padding: 0.75rem;
+		overflow-x: visible;
+
+		code {
+			white-space: pre-wrap;
+			word-break: break-word;
+			font-size: 0.8rem;
+		}
+	}
+
+	.quiz-screen .question__text {
+		font-size: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+}

@@ -1,0 +1,56 @@
+@use '../../styles/tokens' as *;
+
+// ========================================
+// Question Timer
+// ========================================
+
+.question-timer {
+	margin: 1rem 0 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+
+	&__display {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__seconds {
+		font-family: $font-heading;
+		font-size: 1.25rem;
+		font-weight: bold;
+		color: $color-text-muted;
+		transition: color 0.3s ease-in-out;
+
+		&--warning {
+			color: $color-danger;
+			animation: timer-pulse 0.5s ease-in-out infinite;
+		}
+	}
+}
+
+@keyframes timer-pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.7;
+		transform: scale(1.1);
+	}
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 768px) {
+	.question-timer__seconds {
+		font-size: 1.5rem;
+	}
+}
+
+// Reduced motion handled in _globals.scss

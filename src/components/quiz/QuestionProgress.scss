@@ -1,0 +1,14 @@
+@use '../../styles/tokens' as *;
+
+// ========================================
+// Question Progress
+// ========================================
+
+.question-progress {
+	font-family: $font-heading;
+	font-size: 0.875rem;
+	color: $color-text-dim;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	margin-bottom: 0.5rem;
+}

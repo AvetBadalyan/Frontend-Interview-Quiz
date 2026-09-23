@@ -1,0 +1,51 @@
+@use '../../styles/tokens' as *;
+
+// ========================================
+// High Score Display
+// ========================================
+
+.high-score-display {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.75rem 1.25rem;
+	background: rgba($color-surface, 0.3);
+	border: 1px solid $color-surface;
+	border-radius: 8px;
+
+	&__label {
+		font-family: $font-heading;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		color: $color-text-dim;
+	}
+
+	&__value {
+		font-family: $font-heading;
+		font-size: 1.25rem;
+		font-weight: bold;
+		color: $color-gold;
+
+		&:not([data-has-score]) {
+			font-size: 0.875rem;
+			font-weight: normal;
+			color: $color-text-muted;
+		}
+	}
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 480px) {
+	.high-score-display {
+		padding: 0.5rem 1rem;
+
+		&__value {
+			font-size: 1rem;
+		}
+	}
+}

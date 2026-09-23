@@ -9,6 +9,7 @@ import { HighScoreDisplay } from '../../feedback/HighScoreDisplay.jsx'
 import { NewRecordBadge } from '../../feedback/NewRecordBadge.jsx'
 import { AnimatedPage } from '../../layout/AnimatedPage.jsx'
 import { Button } from '../../ui/Button.jsx'
+import './SummaryScreen.scss'
 
 /**
  * SummaryScreen — displayed after the quiz completes.

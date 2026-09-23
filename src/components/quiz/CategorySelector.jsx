@@ -1,4 +1,5 @@
 import { CATEGORY_CONFIG } from '../../data/constants.js'
+import './CategorySelector.scss'
 
 /**
  * Category selector component for quiz configuration

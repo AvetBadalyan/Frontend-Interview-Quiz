@@ -12,6 +12,7 @@ import { AnimatedPage } from '../../layout/AnimatedPage.jsx'
 import { Button } from '../../ui/Button.jsx'
 import { CategorySelector } from '../CategorySelector.jsx'
 import { TopicFilter } from '../TopicFilter.jsx'
+import './StartScreen.scss'
 
 /**
  * StartScreen — quiz configuration screen.

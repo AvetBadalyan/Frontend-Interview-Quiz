@@ -1,6 +1,7 @@
 import quizLogo from '../../assets/quiz-logo.png'
 import { useSound } from '../../context/SoundContext.jsx'
 import { Toggle } from '../ui/Toggle.jsx'
+import './Header.scss'
 
 /**
  * Header component with app title and sound toggle

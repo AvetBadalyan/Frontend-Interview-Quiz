@@ -1,0 +1,49 @@
+@use '../../styles/tokens' as *;
+
+// ========================================
+// Progress Bar
+// ========================================
+
+.progress-bar {
+	width: 50%;
+	height: 0.5rem;
+	border-radius: 24px;
+	background: $color-surface;
+	overflow: hidden;
+	margin: 0 auto;
+
+	&__fill {
+		height: 100%;
+		border-radius: 24px;
+		background: $color-violet-alt;
+
+		&--warning {
+			background: linear-gradient(90deg, $color-warning 0%, $color-danger 100%);
+			animation: pulse-warning 0.5s ease-in-out infinite;
+		}
+	}
+}
+
+@keyframes pulse-warning {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scaleY(1);
+	}
+	50% {
+		opacity: 0.85;
+		transform: scaleY(1.1);
+	}
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 768px) {
+	.progress-bar {
+		width: 80%;
+	}
+}
+
+// Reduced motion handled in _globals.scss

@@ -1,0 +1,51 @@
+// ========================================
+// Design tokens
+// Central palette + fonts so colours stay consistent
+// and can be tuned in one place.
+// ========================================
+
+// Fonts
+$font-body: 'Roboto', sans-serif;
+$font-heading: 'Roboto Condensed', sans-serif;
+$font-mono: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+// Backgrounds / surfaces (dark → light purple)
+$color-bg: #1d0433; // page background
+$color-panel-start: #3e2a60; // panel gradient top
+$color-panel-end: #321061; // panel gradient bottom
+$color-surface: #6a558a; // borders, sliders
+$color-surface-deeper: #3a2353; // summary image border
+
+$color-ink: #191321; // dark text on light buttons
+$color-ink-soft: #2c203d; // dark text on coloured feedback buttons / badge
+
+// Brand purple (primary actions, selection)
+$color-primary: #a17eda;
+$color-primary-dark: #9670cc;
+$color-primary-bright: #8e76fa;
+
+// Accents
+$color-accent: #e781fb; // focus ring, highlights
+$color-danger: #f77aac; // wrong answers, errors
+$color-warning: #f5a76c; // timer warning, cautions
+$color-success: #5af59d; // correct answers
+$color-gold: #f8e59c; // high score / celebration
+$color-answer: #6cb7f5; // answer buttons
+
+// Text (on dark backgrounds)
+$color-text: #ebe7ef;
+$color-text-muted: #c1b2dd;
+$color-text-dim: #ab9dbd;
+$color-text-light: #c7bfd6; // secondary button hover text
+
+// Extra purple shades (hover / gradient stops)
+$color-primary-hover: #bf48f6;
+$color-primary-hover-end: #9b50f2;
+$color-lilac: #b18ee8;
+$color-lilac-dark: #9a70d0;
+$color-violet: #9d5af5; // answer hover
+$color-violet-alt: #9e5ef8; // progress-bar fill
+$color-slate: #7d6a9a; // toggle hover
+
+// Shadows
+$shadow-panel: 1px 1px 8px 4px rgba(12, 5, 32, 0.6);

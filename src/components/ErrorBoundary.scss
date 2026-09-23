@@ -1,0 +1,113 @@
+@use '../styles/tokens' as *;
+
+// ========================================
+// Error Boundary
+// ========================================
+
+.error-boundary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 60vh;
+	padding: 2rem;
+
+	&__content {
+		max-width: 32rem;
+		text-align: center;
+		padding: 2rem;
+		background: linear-gradient(
+			180deg,
+			$color-panel-start 0%,
+			$color-panel-end 100%
+		);
+		border-radius: 12px;
+		box-shadow: $shadow-panel;
+	}
+
+	&__icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		animation: error-shake 0.5s ease-in-out;
+	}
+
+	&__title {
+		font-family: $font-heading;
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $color-danger;
+		margin: 0 0 0.5rem 0;
+	}
+
+	&__message {
+		font-family: $font-body;
+		font-size: 1rem;
+		color: $color-text-muted;
+		margin: 0 0 1.5rem 0;
+	}
+
+	&__details {
+		margin: 1.5rem 0;
+		text-align: left;
+		font-family: $font-body;
+		font-size: 0.875rem;
+		color: $color-text-dim;
+
+		summary {
+			cursor: pointer;
+			padding: 0.5rem;
+			border-radius: 4px;
+			background: rgba($color-surface, 0.2);
+			margin-bottom: 0.5rem;
+
+			&:hover {
+				background: rgba($color-surface, 0.35);
+			}
+		}
+	}
+
+	&__stack {
+		font-family: $font-mono;
+		font-size: 0.75rem;
+		background: rgba(0, 0, 0, 0.3);
+		padding: 1rem;
+		border-radius: 4px;
+		overflow-x: auto;
+		white-space: pre-wrap;
+		word-break: break-word;
+		color: $color-danger;
+		max-height: 12rem;
+		overflow-y: auto;
+	}
+
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+
+		@media (min-width: 400px) {
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+
+	&__button {
+		flex: 1;
+		max-width: 12rem;
+	}
+}
+
+@keyframes error-shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	20%,
+	60% {
+		transform: translateX(-5px);
+	}
+	40%,
+	80% {
+		transform: translateX(5px);
+	}
+}

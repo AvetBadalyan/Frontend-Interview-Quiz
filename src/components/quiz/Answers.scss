@@ -1,0 +1,47 @@
+@use '../../styles/tokens' as *;
+
+// ========================================
+// Answer list wrapper
+// ========================================
+
+.answer {
+	width: 90%;
+	margin: 0 auto;
+}
+
+// Answer keyboard-shortcut hint badge
+.answer__hint {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.5rem;
+	height: 1.5rem;
+	font-family: $font-heading;
+	font-size: 0.75rem;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0.1);
+	color: $color-ink;
+	border-radius: 4px;
+	flex-shrink: 0;
+}
+
+.answer__text {
+	flex: 1;
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 480px) {
+	.answer {
+		width: 100%;
+	}
+}
+
+@media (max-width: 360px) {
+	// Hide keyboard number hints on very small screens
+	.answer__hint {
+		display: none;
+	}
+}
