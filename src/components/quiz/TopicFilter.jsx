@@ -24,10 +24,14 @@ export function TopicFilter({
 	const topics = getTopicsForCategory(category)
 	const isAllSelected = selectedTopics.length === 0
 
-	const availableCount = countAvailableQuestions(category, selectedTopics)
-	const requiredCount = DIFFICULTY_CONFIG[difficulty]?.questionCount || 10
-	const hasInsufficientQuestions =
-		availableCount < requiredCount && !isAllSelected
+	// How many questions the quiz will actually have: the difficulty's target
+	// capped by how many questions of that difficulty (and topic) exist.
+	const availableCount = difficulty
+		? countAvailableQuestions(category, difficulty, selectedTopics)
+		: 0
+	const targetCount = DIFFICULTY_CONFIG[difficulty]?.questionCount ?? 0
+	const quizLength = Math.min(availableCount, targetCount)
+	const showCount = Boolean(difficulty) && availableCount > 0
 
 	/**
 	 * Handles toggling of individual topics
@@ -83,10 +87,16 @@ export function TopicFilter({
 					)
 				})}
 			</div>
-			{hasInsufficientQuestions && (
+			{difficulty && availableCount === 0 && (
 				<p className="topic-filter__warning" role="alert">
-					Only {availableCount} questions available. Need {requiredCount} for{' '}
-					{difficulty} difficulty.
+					No {difficulty} questions available for this selection. Try other
+					topics or a different difficulty.
+				</p>
+			)}
+			{showCount && (
+				<p className="topic-filter__count">
+					This quiz will have {quizLength}{' '}
+					{quizLength === 1 ? 'question' : 'questions'}.
 				</p>
 			)}
 		</div>

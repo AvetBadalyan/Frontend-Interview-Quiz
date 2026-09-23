@@ -933,6 +933,13 @@ body {
 		color: $color-warning;
 		margin: 0.75rem 0 0 0;
 	}
+
+	&__count {
+		font-family: $font-body;
+		font-size: 0.875rem;
+		color: $color-text-dim;
+		margin: 0.75rem 0 0 0;
+	}
 }
 
 /* ========================================

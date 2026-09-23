@@ -1,31 +1,20 @@
 /**
  * React Question Bank
  *
- * Contains questions covering React topics:
- * - hooks: useState, useEffect, useRef, useCallback, useMemo, custom hooks
- * - components: Component definitions, props, fragments, error boundaries, memo, composition
- * - state: State management, props vs state, controlled components, Context API, reducers
- * - jsx: JSX syntax, conditional rendering, list rendering, event handling
- *
- * Each question has:
- * - id: Unique identifier (format: react-XXX)
- * - text: The question text
- * - answers: Array of 4 options (first is always correct before shuffling)
- * - difficulty: 'easy' | 'medium' | 'hard'
- * - category: 'react'
- * - topic: One of the topic tags
+ * Topics: hooks, components, state, jsx
+ * First answer in each answers array is always the correct one (before shuffling).
  */
 
 const reactQuestions = [
-	// COMPONENTS TOPIC
+	// ==================== EASY ====================
 	{
 		id: 'react-001',
-		text: 'Which of the following definitions best describes React.js?',
+		text: 'Which definition best describes React?',
 		answers: [
-			'A library to build user interfaces with help of declarative code.',
-			'A library for managing state in web applications.',
-			'A framework to build user interfaces with help of imperative code.',
-			'A library used for building mobile applications only.'
+			'A library for building user interfaces with declarative code.',
+			'A library for managing application state.',
+			'A framework for building UIs with imperative code.',
+			'A library used only for building mobile applications.'
 		],
 		difficulty: 'easy',
 		category: 'react',
@@ -35,10 +24,10 @@ const reactQuestions = [
 		id: 'react-002',
 		text: 'What is the most common way to create a component in React?',
 		answers: [
-			'By defining a JavaScript function that returns a renderable value.',
+			'By defining a JavaScript function that returns JSX.',
 			'By defining a custom HTML tag in JavaScript.',
 			'By creating a file with a .jsx extension.',
-			'By using the "new" keyword followed by the component name.'
+			'By using the "new" keyword with the component name.'
 		],
 		difficulty: 'easy',
 		category: 'react',
@@ -48,7 +37,7 @@ const reactQuestions = [
 		id: 'react-003',
 		text: 'What are props in React?',
 		answers: [
-			'Inputs that allow passing data from parent to child components.',
+			'Inputs that pass data from a parent to a child component.',
 			'Functions that update the component state.',
 			'Special HTML attributes only available in React.',
 			'CSS properties specific to React components.'
@@ -59,213 +48,199 @@ const reactQuestions = [
 	},
 	{
 		id: 'react-004',
-		text: 'What is a React Fragment?',
+		text: 'What purpose do React hooks serve?',
 		answers: [
-			'A feature that lets you group multiple elements without adding an extra node to the DOM.',
-			'A piece of a component that can be reused in other components.',
-			'A special type of component that only renders once.',
-			'A tool for splitting code into smaller chunks.'
+			'They let you use state and other React features in function components.',
+			'They create responsive layouts.',
+			'They handle errors within the application.',
+			'They are part of the Redux library.'
 		],
-		difficulty: 'medium',
+		difficulty: 'easy',
 		category: 'react',
-		topic: 'components'
+		topic: 'hooks'
 	},
 	{
 		id: 'react-005',
-		text: 'What is the purpose of React.memo?',
-		answers: [
-			"To memoize a component to prevent unnecessary re-renders when its props haven't changed.",
-			'To store important information that should be remembered between renders.',
-			'To create a memorandum of understanding between components.',
-			'To log component activity for debugging purposes.'
-		],
-		difficulty: 'medium',
+		text: 'Which hook adds state to a function component?',
+		answers: ['useState', 'useEffect', 'useRef', 'useContext'],
+		difficulty: 'easy',
 		category: 'react',
-		topic: 'components'
+		topic: 'hooks'
 	},
 	{
 		id: 'react-006',
-		text: 'What are Error Boundaries in React?',
+		text: 'What is the purpose of the useEffect hook?',
 		answers: [
-			'Components that catch JavaScript errors in their child component tree and display a fallback UI.',
-			'Special CSS rules that prevent layout errors in React applications.',
-			'Testing utilities that identify potential errors before deployment.',
-			'Console warnings that appear during development.'
+			'To run side effects such as data fetching or subscriptions.',
+			'To create new state variables.',
+			'To optimize rendering performance.',
+			'To handle form submissions.'
 		],
-		difficulty: 'hard',
+		difficulty: 'easy',
 		category: 'react',
-		topic: 'components'
+		topic: 'hooks'
 	},
 	{
 		id: 'react-007',
-		text: 'What are React Server Components?',
+		text: 'What does the term "React state" mean?',
 		answers: [
-			'Components that render on the server, reducing JavaScript sent to the client and enabling direct access to server resources.',
-			'Components that communicate with servers through API calls.',
-			'Special components used only in server-side rendering frameworks like Next.js.',
-			'Components that store their state on a server instead of in the browser.'
-		],
-		difficulty: 'hard',
-		category: 'react',
-		topic: 'components'
-	},
-
-	// HOOKS TOPIC
-	{
-		id: 'react-008',
-		text: 'What purpose do React hooks serve?',
-		answers: [
-			'Enabling the use of state and other React features in functional components.',
-			'Creating responsive layouts in React applications.',
-			'Handling errors within the application.',
-			'Part of the Redux library for managing global state.'
+			'Data held by a component that can change and trigger a re-render.',
+			'The lifecycle phase a component is in.',
+			'The overall status of the whole application.',
+			'A library for managing global state.'
 		],
 		difficulty: 'easy',
 		category: 'react',
-		topic: 'hooks'
+		topic: 'state'
+	},
+	{
+		id: 'react-008',
+		text: 'What is JSX?',
+		answers: [
+			'A syntax extension that lets you write HTML-like markup in JavaScript.',
+			'A JavaScript library for building UIs.',
+			'A specific HTML version created for React.',
+			'A tool for making HTTP requests.'
+		],
+		difficulty: 'easy',
+		category: 'react',
+		topic: 'jsx'
 	},
 	{
 		id: 'react-009',
-		text: 'What is the purpose of the useEffect hook?',
+		text: 'How do you typically render a list in React?',
 		answers: [
-			'To perform side effects in functional components, such as data fetching or DOM manipulation.',
-			'To create new state variables in a component.',
-			'To optimize rendering performance in React applications.',
-			'To handle form submissions in React.'
+			'By using the map() method to return JSX for each item.',
+			'By using a for loop that returns JSX.',
+			'By using the forEach() method to return JSX.',
+			'By using a loop() method to return JSX.'
 		],
 		difficulty: 'easy',
 		category: 'react',
-		topic: 'hooks'
+		topic: 'jsx'
 	},
 	{
 		id: 'react-010',
+		text: 'How are events handled in React?',
+		answers: [
+			'With camelCase handlers that receive a function (e.g. onClick={fn}).',
+			'By adding listeners with document.addEventListener.',
+			'With lowercase handlers like standard HTML (onclick="fn()").',
+			'By importing handlers from separate event files.'
+		],
+		difficulty: 'easy',
+		category: 'react',
+		topic: 'jsx'
+	},
+	{
+		id: 'react-011',
+		text: 'How do you pass a prop called "title" to a component?',
+		answers: [
+			'<Card title="Hello" />',
+			'<Card props.title="Hello" />',
+			'<Card :title="Hello" />',
+			'<Card [title]="Hello" />'
+		],
+		difficulty: 'easy',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-012',
+		text: 'What must a component return to render nothing?',
+		answers: ['null', 'undefined', 'false only', 'an empty string only'],
+		difficulty: 'easy',
+		category: 'react',
+		topic: 'jsx'
+	},
+
+	// ==================== MEDIUM ====================
+	{
+		id: 'react-013',
+		text: 'What is a React Fragment?',
+		answers: [
+			'A way to group elements without adding an extra DOM node.',
+			'A reusable piece of a component.',
+			'A component that only renders once.',
+			'A tool for splitting code into chunks.'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-014',
+		text: 'What is the purpose of React.memo?',
+		answers: [
+			"To skip re-rendering a component when its props haven't changed.",
+			'To store information remembered between renders.',
+			'To create a memo between components.',
+			'To log component activity for debugging.'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-015',
 		text: 'What is the purpose of the useRef hook?',
 		answers: [
-			'To create a mutable reference that persists across renders without causing re-renders when changed.',
-			'To reference external libraries and integrate them with React.',
-			'To create references to CSS styles for a component.',
-			'To refer to previous state values in functional components.'
+			'To hold a mutable value that persists across renders without causing a re-render.',
+			'To reference external libraries.',
+			'To reference CSS styles for a component.',
+			'To automatically track previous state values.'
 		],
 		difficulty: 'medium',
 		category: 'react',
 		topic: 'hooks'
 	},
-
-	// STATE TOPIC
-	{
-		id: 'react-011',
-		text: 'What does the term "React state" imply?',
-		answers: [
-			'An object in a component that holds values and may cause the component to render on change.',
-			'The lifecycle phase a React component is in.',
-			'The overall status of a React application, including all props and components.',
-			'A library for managing global state in React applications.'
-		],
-		difficulty: 'easy',
-		category: 'react',
-		topic: 'state'
-	},
-	{
-		id: 'react-012',
-		text: 'What is a controlled component in React?',
-		answers: [
-			'A component where form data is handled by the React state rather than the DOM.',
-			'A component that cannot be modified by users.',
-			'A component that controls other components in the application.',
-			'A component with restricted access to certain features.'
-		],
-		difficulty: 'medium',
-		category: 'react',
-		topic: 'state'
-	},
-	{
-		id: 'react-013',
-		text: 'What is the Context API used for in React?',
-		answers: [
-			'To share data that can be considered global for a tree of React components without prop drilling.',
-			'To create animations between component transitions.',
-			'To handle HTTP requests to external APIs.',
-			'To optimize images and other media in React applications.'
-		],
-		difficulty: 'medium',
-		category: 'react',
-		topic: 'state'
-	},
-	{
-		id: 'react-014',
-		text: 'What is the difference between state and props?',
-		answers: [
-			'State is managed within a component and can change, while props are passed to a component and are immutable.',
-			'State is passed from parent components, while props are defined internally.',
-			'State is always public, while props can be private to a component.',
-			'State is used for styling, while props are used for data management.'
-		],
-		difficulty: 'medium',
-		category: 'react',
-		topic: 'state'
-	},
-
-	// JSX TOPIC
-	{
-		id: 'react-015',
-		text: 'Can you identify what JSX is?',
-		answers: [
-			'A JavaScript extension that adds HTML-like syntax to JavaScript.',
-			'A JavaScript library for building dynamic user interfaces.',
-			'A specific HTML version that was explicitly created for React.',
-			'A tool for making HTTP requests in a React application.'
-		],
-		difficulty: 'easy',
-		category: 'react',
-		topic: 'jsx'
-	},
 	{
 		id: 'react-016',
-		text: 'How do you typically render list content in React apps?',
+		text: 'What is a controlled component?',
 		answers: [
-			'By using the map() method to iterate over an array of data and returning JSX.',
-			'By using the for() loop to iterate over an array of data and returning JSX.',
-			'By using the forEach() method to iterate over an array of data and returning JSX.',
-			'By using the loop() method to iterate over an array of data and returning JSX.'
+			'A form input whose value is driven by React state.',
+			'A component that cannot be modified by users.',
+			'A component that controls other components.',
+			'A component with restricted feature access.'
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		category: 'react',
-		topic: 'jsx'
+		topic: 'state'
 	},
 	{
 		id: 'react-017',
-		text: 'Which approach can NOT be used to render content conditionally?',
+		text: 'What is the Context API used for?',
 		answers: [
-			'Using a the #if template syntax.',
-			'Using a ternary operator.',
-			'Using the && operator.',
-			'Using an if-else statement.'
+			'Sharing data across a component tree without prop drilling.',
+			'Creating animations between transitions.',
+			'Making HTTP requests to APIs.',
+			'Optimizing images and media.'
 		],
 		difficulty: 'medium',
 		category: 'react',
-		topic: 'jsx'
+		topic: 'state'
 	},
 	{
 		id: 'react-018',
-		text: 'Why is the "key" prop important when rendering lists in React?',
+		text: 'What is the difference between state and props?',
 		answers: [
-			'It helps React identify which items have changed, been added, or removed, improving rendering efficiency.',
-			'It is required for CSS styling of list items.',
-			'It provides accessibility features for screen readers.',
-			'It is used to sort the list items automatically.'
+			'State is managed inside a component and can change; props are passed in and are read-only.',
+			'State is passed from parents; props are defined internally.',
+			'State is always public; props are private.',
+			'State is for styling; props are for data.'
 		],
 		difficulty: 'medium',
 		category: 'react',
-		topic: 'jsx'
+		topic: 'state'
 	},
 	{
 		id: 'react-019',
-		text: 'What is the Virtual DOM in React?',
+		text: 'Why is the "key" prop important when rendering lists?',
 		answers: [
-			'A lightweight copy of the real DOM that React uses to optimize rendering performance.',
-			'A special browser feature that only works with React applications.',
-			'A database where React stores component information.',
-			'The actual HTML DOM that the browser renders.'
+			'It helps React identify which items changed, were added, or removed.',
+			'It is required for CSS styling of list items.',
+			'It provides accessibility features for screen readers.',
+			'It automatically sorts the list items.'
 		],
 		difficulty: 'medium',
 		category: 'react',
@@ -273,16 +248,239 @@ const reactQuestions = [
 	},
 	{
 		id: 'react-020',
-		text: 'How do you handle events in React?',
+		text: 'What is the Virtual DOM?',
 		answers: [
-			'By using camelCase event handlers and passing functions as event handlers rather than strings.',
-			'By adding event listeners directly to the DOM using document.addEventListener.',
-			'By using lowercase event handlers similar to standard HTML.',
-			'By creating separate event handler files that are imported into components.'
+			'An in-memory copy of the UI that React diffs against to update the real DOM efficiently.',
+			'A browser feature that only works with React.',
+			'A database where React stores components.',
+			'The actual HTML DOM the browser renders.'
 		],
-		difficulty: 'easy',
+		difficulty: 'medium',
 		category: 'react',
 		topic: 'jsx'
+	},
+	{
+		id: 'react-021',
+		text: 'Which approach can NOT be used to render content conditionally in JSX?',
+		answers: [
+			'A #if template directive.',
+			'A ternary operator.',
+			'The && operator.',
+			'An if statement before the return.'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'jsx'
+	},
+	{
+		id: 'react-022',
+		text: 'What does the dependency array of useEffect control?',
+		answers: [
+			'When the effect re-runs — it runs again if a listed value changed.',
+			'Which variables the effect is allowed to read.',
+			'The order in which multiple effects run.',
+			'Whether the effect runs on the server.'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-023',
+		text: 'Why should you never call a hook inside a condition or loop?',
+		answers: [
+			'Hooks must run in the same order on every render for React to track them.',
+			'It makes the component slower.',
+			'Conditions cannot contain function calls.',
+			'Hooks can only be called once per file.'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-024',
+		text: 'What is the correct way to update state based on the previous value?',
+		answers: [
+			'setCount(prev => prev + 1)',
+			'setCount(count + 1) inside a loop',
+			'count = count + 1',
+			'setCount(this.count + 1)'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'state'
+	},
+	{
+		id: 'react-025',
+		text: 'What does the useMemo hook do?',
+		answers: [
+			'Caches the result of an expensive calculation between renders.',
+			'Memorizes a component to skip re-renders.',
+			'Stores state that survives unmounting.',
+			'Runs a side effect after render.'
+		],
+		difficulty: 'medium',
+		category: 'react',
+		topic: 'hooks'
+	},
+
+	// ==================== HARD ====================
+	{
+		id: 'react-026',
+		text: 'What are Error Boundaries in React?',
+		answers: [
+			'Components that catch JS errors in their child tree and show a fallback UI.',
+			'CSS rules that prevent layout errors.',
+			'Testing utilities that find errors before deployment.',
+			'Console warnings shown during development.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-027',
+		text: 'What are React Server Components?',
+		answers: [
+			'Components that render on the server, reducing client JS and allowing direct server-resource access.',
+			'Components that communicate with servers via API calls.',
+			'Components used only in server-side rendering setups.',
+			'Components that store their state on a server.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-028',
+		text: 'Why can Error Boundaries only be class components (not hooks)?',
+		answers: [
+			'There is no hook equivalent for getDerivedStateFromError / componentDidCatch.',
+			'Hooks cannot render a fallback UI.',
+			'Class components render faster on errors.',
+			'It is a lint rule, not a real limitation.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-029',
+		text: 'What problem does useCallback solve?',
+		answers: [
+			'It keeps a function identity stable across renders so memoized children do not re-render needlessly.',
+			'It caches the return value of a function.',
+			'It delays a function until the next render.',
+			'It runs a function only on mount.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-030',
+		text: 'What will this component log on the first render and after one click?\n\nfunction C() {\n  const [n, setN] = useState(0);\n  useEffect(() => { console.log(n); });\n  return <button onClick={() => setN(n + 1)}>{n}</button>;\n}',
+		answers: [
+			'0, then 1',
+			'0, then 0',
+			'1, then 2',
+			'nothing on first render, then 1'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-031',
+		text: 'Why might two rapid setCount(count + 1) calls in the same handler only increment once?',
+		answers: [
+			'Both read the same stale count from the current render; use the updater form to fix it.',
+			'React ignores duplicate state updates.',
+			'setCount is asynchronous and throws away the first call.',
+			'State can only update once per second.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'state'
+	},
+	{
+		id: 'react-032',
+		text: 'When does useReducer become preferable to useState?',
+		answers: [
+			'When state transitions are complex or the next state depends on the previous one in structured ways.',
+			'When the component has no state at all.',
+			'Only in class components.',
+			'When you need to fetch data.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'state'
+	},
+	{
+		id: 'react-033',
+		text: 'What is the difference between useEffect and useLayoutEffect?',
+		answers: [
+			'useLayoutEffect fires synchronously after DOM mutations but before paint; useEffect fires after paint.',
+			'useLayoutEffect only runs on the server.',
+			'useEffect runs before render, useLayoutEffect after.',
+			'They are identical aliases.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'hooks'
+	},
+	{
+		id: 'react-034',
+		text: 'Why can using an array index as a list key cause bugs?',
+		answers: [
+			'If the list reorders or items are inserted/removed, indexes shift and React may reuse the wrong element state.',
+			'Indexes are always strings and keys must be numbers.',
+			'It disables the Virtual DOM.',
+			'React forbids numeric keys entirely.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'jsx'
+	},
+	{
+		id: 'react-035',
+		text: 'What does the children prop let a component do?',
+		answers: [
+			'Render whatever JSX is passed between its opening and closing tags (composition).',
+			'Access its parent component directly.',
+			'Automatically inherit the parent state.',
+			'List all child components in the tree.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'components'
+	},
+	{
+		id: 'react-036',
+		text: 'Why is mutating state directly (e.g. state.push(x)) a problem?',
+		answers: [
+			'React compares references to decide re-renders, so a mutated same-reference object may not trigger an update.',
+			'It permanently freezes the component.',
+			'Arrays cannot be stored in state.',
+			'It always throws a runtime error.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'state'
+	},
+	{
+		id: 'react-037',
+		text: 'What is the purpose of a custom hook (a function starting with "use")?',
+		answers: [
+			'To extract and reuse stateful logic across components while following the rules of hooks.',
+			'To replace class components entirely.',
+			'To create new HTML elements.',
+			'To style components with reusable CSS.'
+		],
+		difficulty: 'hard',
+		category: 'react',
+		topic: 'hooks'
 	}
 ]
 
