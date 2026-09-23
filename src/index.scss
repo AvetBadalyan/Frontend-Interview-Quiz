@@ -23,7 +23,7 @@ $color-ink-soft: #2c203d; // dark text on coloured feedback buttons / badge
 
 // Brand purple (primary actions, selection)
 $color-primary: #a17eda;
-$color-primary-dark: #895fc4;
+$color-primary-dark: #9670cc;
 $color-primary-bright: #8e76fa;
 
 // Accents
@@ -1343,6 +1343,20 @@ body {
 	#summary {
 		padding: 1rem;
 		border-radius: 8px;
+	}
+
+	/* On small screens, wrap long code lines instead of clipping them so
+	   JS Tricky questions stay fully readable without horizontal scrolling.
+	   Scoped under .quiz-screen to match the base rule's specificity. */
+	.quiz-screen .question__code {
+		padding: 0.75rem;
+		overflow-x: visible;
+
+		code {
+			white-space: pre-wrap;
+			word-break: break-word;
+			font-size: 0.8rem;
+		}
 	}
 
 	.header {
