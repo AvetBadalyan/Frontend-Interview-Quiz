@@ -1,4 +1,4 @@
-import quizLogo from '../../assets/quiz-logo.png'
+import quizLogo from '../../assets/quiz-logo.webp'
 import { useSound } from '../../context/SoundContext.jsx'
 import { Toggle } from '../ui/Toggle.jsx'
 import './Header.scss'

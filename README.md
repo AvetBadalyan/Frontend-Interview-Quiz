@@ -4,7 +4,7 @@ An interactive frontend developer quiz app built with React 19. Tests knowledge 
 
 **[Live Demo →](https://frontend-interview-quiz.vercel.app)**
 
-![Frontend Quiz screenshot](./src/assets/screenshot.jpg)
+![Frontend Quiz screenshot](./src/assets/screenshot.webp)
 
 ## Features
 

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import quizCompleteImg from '../../../assets/quiz-complete.png'
+import quizCompleteImg from '../../../assets/quiz-complete.webp'
 import { useQuiz } from '../../../context/QuizContext.jsx'
 import { CATEGORY_CONFIG, DIFFICULTY_CONFIG } from '../../../data/constants.js'
 import { useHighScores } from '../../../hooks/useHighScores.js'
