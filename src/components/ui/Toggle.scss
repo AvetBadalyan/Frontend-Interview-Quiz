@@ -90,7 +90,9 @@
 // ========================================
 
 @media (max-width: 768px) {
-	.toggle__slider {
+	// Make the whole toggle label the 44px touch target, not the slider track.
+	// Setting min-height on the slider distorts the visual (tall track, tiny knob).
+	.toggle {
 		min-height: 44px;
 	}
 }

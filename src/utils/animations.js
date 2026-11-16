@@ -58,9 +58,11 @@ export const questionVariants = {
  * Parent container that orchestrates child animation timing
  *
  * @type {Object}
+ * @property {Object} initial - Empty initial state (children animate themselves via answerVariants)
  * @property {Object} animate - Animation state with stagger configuration
  */
 export const answersContainerVariants = {
+	initial: {},
 	animate: {
 		transition: {
 			staggerChildren: 0.1

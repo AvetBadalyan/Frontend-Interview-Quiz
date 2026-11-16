@@ -4,16 +4,46 @@
 		<meta charset="UTF-8" />
 		<link
 			rel="icon"
-			type="image/svg+xml"
+			type="image/png"
 			href="/quiz-logo.png"
 		/>
+		<!-- iOS home screen icon -->
+		<link rel="apple-touch-icon" href="/quiz-logo.png" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
+		<!-- Signal dark colour scheme so browser chrome and native controls match -->
+		<meta name="color-scheme" content="dark" />
+		<!-- Mobile browser address-bar colour -->
+		<meta name="theme-color" content="#1d0433" />
+
 		<title>Frontend Quiz</title>
+		<meta
+			name="description"
+			content="Test your frontend knowledge across HTML, CSS, JavaScript, React, and tricky JS output questions. Timed rounds, difficulty levels, and high-score tracking."
+		/>
+
+		<!-- Open Graph / social preview -->
+		<meta property="og:title" content="Frontend Quiz" />
+		<meta
+			property="og:description"
+			content="Interactive frontend developer quiz across HTML, CSS, JavaScript, React, and JS Tricky."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://frontend-interview-quiz.vercel.app/quiz-logo.png" />
+
+		<!-- Google Fonts: preconnect first, then the stylesheet link (non-blocking) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+		/>
 	</head>
 	<body>
+		<!-- Skip link: lets keyboard users jump past the header to the main content -->
+		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<div id="root"></div>
 		<script
 			type="module"

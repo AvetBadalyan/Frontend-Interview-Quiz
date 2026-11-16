@@ -29,7 +29,9 @@ export function HighScoreDisplay({ highScore }) {
 			aria-label={`High score: ${highScore.score} percent`}
 		>
 			<span className="high-score-display__label">High Score</span>
-			<span className="high-score-display__value">{highScore.score}%</span>
+			<span className="high-score-display__value high-score-display__value--score">
+				{highScore.score}%
+			</span>
 		</div>
 	)
 }

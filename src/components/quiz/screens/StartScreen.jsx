@@ -154,7 +154,6 @@ export function StartScreen() {
 									onClick={() => handleDifficultySelect(diffKey)}
 									type="button"
 									aria-pressed={isSelected}
-									aria-label={`${info.label} difficulty: ${info.description}`}
 								>
 									<span className="difficulty-selector__label">
 										{info.label}

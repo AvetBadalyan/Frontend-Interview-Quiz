@@ -18,12 +18,17 @@ export function Confetti({ trigger }) {
 	useEffect(() => {
 		if (!trigger) return
 
+		// Flag lets us cancel the loop if the component unmounts mid-animation
+		let running = true
+
 		try {
 			// Fire for 3–5 seconds
 			const duration = 3000 + Math.random() * 2000
 			const animationEnd = Date.now() + duration
 
 			const frame = () => {
+				if (!running) return
+
 				// Fire confetti from left side
 				confetti({
 					particleCount: 3,
@@ -53,6 +58,11 @@ export function Confetti({ trigger }) {
 			// Graceful fallback - log warning but don't crash the app
 			// The Summary screen will display the new record badge as alternative celebration
 			console.warn('Confetti animation failed:', error)
+		}
+
+		// Cancel rAF loop on unmount
+		return () => {
+			running = false
 		}
 	}, [trigger])
 

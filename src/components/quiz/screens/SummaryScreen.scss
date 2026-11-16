@@ -4,7 +4,7 @@
 // Summary Screen
 // ========================================
 
-#summary {
+.summary-screen {
 	max-width: 40rem;
 	margin: 2rem auto;
 	padding: 2rem;
@@ -20,7 +20,7 @@
 	img {
 		display: block;
 		width: 8rem;
-		height: 8rem;
+		height: auto; // preserve natural 400:451 aspect ratio
 		object-fit: contain;
 		margin: 0 auto 1rem auto;
 		padding: 1rem;
@@ -39,6 +39,7 @@
 		color: $color-text;
 	}
 
+	// Shared text styles for the question breakdown list
 	.question {
 		margin: 0.25rem 0;
 		font-size: 1rem;
@@ -62,41 +63,39 @@
 			font-weight: normal;
 		}
 	}
-}
 
-#summary-stats {
-	display: flex;
-	gap: 3rem;
-	width: 60%;
-	margin: 2rem auto;
-	padding-bottom: 2rem;
-	border-bottom: 2px solid $color-surface;
-
-	p {
-		flex: 1;
+	&__stats {
 		display: flex;
-		flex-direction: column;
-		margin: 0;
+		gap: 3rem;
+		width: 60%;
+		margin: 2rem auto;
+		padding-bottom: 2rem;
+		border-bottom: 2px solid $color-surface;
+
+		p {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+		}
+
+		.number {
+			font-family: $font-heading;
+			font-size: 3rem;
+			color: $color-primary;
+		}
+
+		.text {
+			font-family: $font-heading;
+			text-transform: uppercase;
+			font-size: 0.75rem;
+			color: $color-text-muted;
+			margin-top: -0.7rem;
+			margin-left: 0.2rem;
+			letter-spacing: 0.1rem;
+		}
 	}
 
-	.number {
-		font-family: $font-heading;
-		font-size: 3rem;
-		color: $color-primary;
-	}
-
-	.text {
-		font-family: $font-heading;
-		text-transform: uppercase;
-		font-size: 0.75rem;
-		color: $color-text-muted;
-		margin-top: -0.7rem;
-		margin-left: 0.2rem;
-		letter-spacing: 0.1rem;
-	}
-}
-
-.summary-screen {
 	&__meta {
 		display: flex;
 		align-items: center;
@@ -215,29 +214,29 @@
 // ========================================
 
 @media (max-width: 768px) {
-	#summary {
+	.summary-screen {
 		padding: 1.5rem;
 		margin: 1rem auto;
-	}
 
-	// Summary stats — stack on mobile
-	#summary-stats {
-		flex-direction: column;
-		gap: 1.5rem;
-		width: 100%;
+		&__stats {
+			flex-direction: column;
+			gap: 1.5rem;
+			width: 100%;
+		}
 	}
 }
 
 @media (max-width: 480px) {
-	#summary {
+	.summary-screen {
 		padding: 1rem;
 		border-radius: 8px;
-	}
 
-	#summary h2 {
-		font-size: 2rem;
-	}
-	#summary-stats .number {
-		font-size: 2rem;
+		h2 {
+			font-size: 2rem;
+		}
+
+		&__stats .number {
+			font-size: 2rem;
+		}
 	}
 }

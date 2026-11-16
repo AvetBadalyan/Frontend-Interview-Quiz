@@ -4,6 +4,13 @@
 // Answer list wrapper
 // ========================================
 
+// Reset browser default list styling so no bullet points appear
+.answers {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .answer {
 	width: 90%;
 	margin: 0 auto;

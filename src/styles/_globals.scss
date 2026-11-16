@@ -5,7 +5,8 @@
 // Base resets, body, accessibility utilities
 // ========================================
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
+// Note: Roboto and Roboto Condensed are loaded via <link> tags in index.html
+// (preconnect + stylesheet) for non-blocking font loading.
 
 * {
 	box-sizing: border-box;
@@ -36,6 +37,26 @@ body {
 // ========================================
 // Accessibility
 // ========================================
+
+// Skip link — visually hidden until focused; lets keyboard users bypass the header
+.skip-link {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	padding: 0.5rem 1rem;
+	background: $color-primary;
+	color: $color-ink;
+	font-family: $font-heading;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-decoration: none;
+	z-index: 9999;
+	border-radius: 0 0 4px 0;
+
+	&:focus {
+		top: 0;
+	}
+}
 
 button:focus-visible,
 a:focus-visible,

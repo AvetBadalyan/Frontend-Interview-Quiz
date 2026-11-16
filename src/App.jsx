@@ -33,7 +33,7 @@ function AppContent() {
 	return (
 		<>
 			<Header />
-			<main>
+			<main id="main-content">
 				<AnimatePresence mode="wait">{renderScreen()}</AnimatePresence>
 			</main>
 		</>

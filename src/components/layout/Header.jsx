@@ -15,7 +15,8 @@ export function Header() {
 	return (
 		<header className="header" role="banner">
 			<div className="header__logo">
-				<img src={quizLogo} alt="" aria-hidden="true" />
+				{/* Natural dimensions declared so browser reserves space; CSS sets display size */}
+				<img src={quizLogo} alt="" aria-hidden="true" width="500" height="534" />
 				<h1>Frontend Quiz</h1>
 			</div>
 			<div className="header__controls">

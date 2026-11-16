@@ -93,14 +93,13 @@ export function SummaryScreen() {
 			{isNewRecord && <Confetti trigger />}
 
 			<div
-				id="summary"
 				className="summary-screen"
-				role="main"
+				role="region"
 				aria-labelledby="summary-title"
 				ref={screenRef}
 				tabIndex={-1}
 			>
-				<img src={quizCompleteImg} alt="" aria-hidden="true" />
+				<img src={quizCompleteImg} alt="" aria-hidden="true" width="400" height="451" />
 				<h2 id="summary-title">Quiz Completed!</h2>
 
 				<div
@@ -124,7 +123,7 @@ export function SummaryScreen() {
 
 				{isNewRecord && <NewRecordBadge />}
 
-				<div id="summary-stats" role="region" aria-label="Quiz statistics">
+				<div role="region" aria-label="Quiz statistics" className="summary-screen__stats">
 					<p>
 						<span className="number">{percentages.skipped}%</span>
 						<span className="text">skipped</span>
